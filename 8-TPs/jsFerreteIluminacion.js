@@ -13,26 +13,73 @@ function CalcularPrecio ()
     var cantidad;
     var resultado;
     var marca;
+    var ingresosBrutos;
     marca=document.getElementById("Marca").value;
     cantidad=document.getElementById("Cantidad").value;
     cantidad=parseInt(cantidad);
     if (cantidad>=6)
     {
         resultado=(cantidad*35)*0.50;
-        alert (resultado);
     }
     else
     {
-        if (cantidad=5)&&(marca="ArgentinaLuz")
-         resultado=(cantidad*35)*1.40;
+        if (cantidad==5 && marca=="ArgentinaLuz")
+         resultado=(cantidad*35)*0.60;
             else
             {
-                if (cantidad=5)&&(marca=!"ArgentinaLuz")
+                if (cantidad==5 && marca !="ArgentinaLuz")
                 {
-                    resultado=(cantidad*35)*1.30;
+                    resultado=(cantidad*35)*0.70;
                 }
                     else
                     {
-                        if (cantidad=4)&&(marca="ArgentinaLuz"||"FelipeLamparas")        
-                    
+                        if (cantidad==4 && marca==("ArgentinaLuz"||"FelipeLamparas"))      
+                        {
+                            resultado=(cantidad*35)*0.75;
+                        }
+                            else 
+                            {
+                                if ((cantidad==4) && (marca!="ArgentinaLuz"&&"FelipeLamparas"))
+                                {
+                                    resultado=(cantidad*35)*0.80;
+                                }
+                                    else
+                                    {
+                                        if (cantidad==3 && marca =="ArgentinaLuz")
+                                        {
+                                            resultado=(cantidad*35)*0.85;
+                                        }
+                                            else
+                                            {
+                                                if (cantidad==3 && marca =="FelipeLamparas")
+                                                {
+                                                    resultado=(cantidad*35)*0.90;
+                                                }
+                                                    else
+                                                    {
+                                                        if (cantidad==3 && (marca!=("ArgentinaLuz"&&"FelipeLamparas"))) 
+                                                        {
+                                                            resultado=(cantidad*35)*0.95;
+                                                        }
+                                                        else
+                                                        {
+                                                            resultado=cantidad*35;
+                                                        }    
+                                                    }
+                                            }
+                                    }
+                            }
+                    }
+            }
+    }
+    if  (resultado > 120)
+    {
+        ingresosBrutos=resultado*0.10;
+        resultado=resultado*1.10;
+        alert (resultado + "usted pago de ingresos brutos " + ingresosBrutos);
+    }
+    else
+    {
+         alert (resultado);
+    }        
 }
