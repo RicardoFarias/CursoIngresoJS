@@ -33,13 +33,13 @@ function CalcularPrecio ()
                 }
                     else
                     {
-                        if (cantidad==4 && marca==("ArgentinaLuz"||"FelipeLamparas"))      
+                        if (cantidad==4 && (marca=="ArgentinaLuz"||marca=="FelipeLamparas"))      
                         {
                             resultado=(cantidad*35)*0.75;
                         }
                             else 
                             {
-                                if ((cantidad==4) && (marca!="ArgentinaLuz"&&"FelipeLamparas"))
+                                if ((cantidad==4) && (marca!=("ArgentinaLuz"&&"FelipeLamparas")))
                                 {
                                     resultado=(cantidad*35)*0.80;
                                 }
@@ -76,10 +76,12 @@ function CalcularPrecio ()
     {
         ingresosBrutos=resultado*0.10;
         resultado=resultado*1.10;
-        alert (resultado + "usted pago de ingresos brutos " + ingresosBrutos);
+        resultado= Math.floor(resultado);
+        alert ("$"+resultado + "  IIBB  Usted pago de ingresos brutos: $" + ingresosBrutos);
     }
     else
     {
+         resultado= Math.floor(resultado);
          alert (resultado);
     }        
 }
