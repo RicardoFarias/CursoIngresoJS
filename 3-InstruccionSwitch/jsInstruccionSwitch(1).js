@@ -1,8 +1,9 @@
 function Mostrar()
 {
 //tomo la edad  
-var mesDelAño = document.getElementById("FormIngreso").value;
-switch (mesDelAño){
+var mesDelAño = document.getElementById("mes").value;
+switch (mesDelAño)
+{
     case "Enero":
     alert ("Que comiences bien el año!!!");
     break;
@@ -14,8 +15,6 @@ switch (mesDelAño){
     break;
     case "Diciembre":
     alert ("Felices fiestas!!!");
-    break;
-    default:
     break;
 }
 }//FIN DE LA FUNCIÓN
