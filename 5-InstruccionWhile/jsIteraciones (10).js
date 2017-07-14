@@ -26,7 +26,7 @@ function Mostrar()
 		{
 			cantidadPares++;
 		}
-		if (numero=0)
+		if (numero==0)
 		{
 			cantidadCeros++;
 		}
@@ -40,6 +40,7 @@ function Mostrar()
 			sumaNegativos+=numero;
 			cantidadNegativos++;
 		}
+		respuesta=prompt ("Desea ingresar otro numero..?");
 	}
 promPositivos=sumaPositivos/cantidadPositivos;
 promNegativos=sumaNegativos/cantidadNegativos;
@@ -48,14 +49,16 @@ if (diferencia<0)
 {
 	diferencia*=-1;
 }
+
+Document.write ("Los resultados son:");
 Document.write ("el promedio de los positivos es: " + promPositivos);
-Document.write ("el promedio de los negativos es :" + promNegativos);
+Document.write ("el promedio de los negativos es: " + promNegativos);
 Document.write ("la direncia entre los numeros positivos y negativos es: " + diferencia);
 Document.write ("la cantidad de ceros es: " + cantidadCeros);
 Document.write ("la cantidad de positivos es: " + cantidadPositivos);
 Document.write ("la cantidad de negativos es: " + cantidadNegativos);
 Document.write ("la suma de los positivos es: " + sumaPositivos);
 Document.write ("la suma de los negativos es: " + sumaNegativos);
-Document.write ("la cantidad de numeros pares es: " +cantidadPares);
+Document.write ("la cantidad de numeros pares es: " + cantidadPares);
 
 }//FIN DE LA FUNCIÓN
