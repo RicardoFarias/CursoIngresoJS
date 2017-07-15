@@ -27,7 +27,7 @@ function CalcularPrecio ()
          resultado=(cantidad*35)*0.60;
             else
             {
-                if (cantidad==5 && marca !="ArgentinaLuz")
+                if (cantidad==5)
                 {
                     resultado=(cantidad*35)*0.70;
                 }
@@ -39,7 +39,7 @@ function CalcularPrecio ()
                         }
                             else 
                             {
-                                if ((cantidad==4) && (marca!=("ArgentinaLuz"&&"FelipeLamparas")))
+                                if (cantidad==4)
                                 {
                                     resultado=(cantidad*35)*0.80;
                                 }
@@ -57,7 +57,7 @@ function CalcularPrecio ()
                                                 }
                                                     else
                                                     {
-                                                        if (cantidad==3 && (marca!=("ArgentinaLuz"&&"FelipeLamparas"))) 
+                                                        if (cantidad==3) 
                                                         {
                                                             resultado=(cantidad*35)*0.95;
                                                         }
