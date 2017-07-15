@@ -5,6 +5,9 @@ El jugador seleccionará una imagen correspondiente
 a su opción  y le informaremos si ganó, empató o perdió.
 */
 var eleccionMaquina;
+var contP=0;
+var contG=0;
+var contE=0;
 
 function comenzar()
 {
@@ -17,17 +20,20 @@ function piedra()
 	comenzar();
     if (eleccionMaquina==1)
     {
-        alert ("Empate");
+       contE++;
+        alert ("Empate    "+contG+"-"+contE+"-"+contP);  
     }
     else
     {
         if (eleccionMaquina==2)
         {
-            alert ("Perdió");
+            contP++;
+            alert ("Perdió    "+contG+"-"+contE+"-"+contP);
         }
         else
         {
-            alert ("Ganó");    
+            contG++;
+            alert ("Ganó     "+contG+"-"+contE+"-"+contP);
         }
     }
 
@@ -37,17 +43,20 @@ function papel()
     comenzar();
 if (eleccionMaquina==1)
     {
-        alert ("Ganó");
+        contG++;
+        alert ("Ganó     "+contG+"-"+contE+"-"+contP);
     }
     else
     {
         if (eleccionMaquina==2)
         {
-            alert ("Empate");
+            contE++;
+            alert ("Empate    "+contG+"-"+contE+"-"+contP);  
         }
         else
         {
-            alert ("Perdió");    
+           contP++;
+        alert ("Perdió    "+contG+"-"+contE+"-"+contP);
         }
     }
 
@@ -58,17 +67,20 @@ function tijera()
     comenzar();
 	if (eleccionMaquina==1)
     {
-        alert ("Perdió");
+        contP++;
+        alert ("Perdió    "+contG+"-"+contE+"-"+contP);
     }
     else
     {
         if (eleccionMaquina==2)
         {
-            alert ("Ganó");
+            contG++;
+            alert ("Ganó     "+contG+"-"+contE+"-"+contP);
         }
         else
         {
-            alert ("Empate");    
+            contE++;
+            alert ("Empate    "+contG+"-"+contE+"-"+contP);    
         }
     }
 
