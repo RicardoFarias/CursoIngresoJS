@@ -8,7 +8,17 @@ var eleccionMaquina;
 var contP=0;
 var contG=0;
 var contE=0;
-
+var resultado;
+function mostrarResultado()
+{
+    if(contG>contP+contE&&contP+contE+contG>=3)
+    {
+        contG--;
+        contP++;
+        resultado="perdió";
+    }
+    alert(resultado+contG+"-"+contE+"-"+contP);
+}
 function comenzar()
 {
 eleccionMaquina= Math.floor (Math.random()* (4-1))+1;
@@ -21,22 +31,22 @@ function piedra()
     if (eleccionMaquina==1)
     {
        contE++;
-        alert ("Empate    "+contG+"-"+contE+"-"+contP);  
+        resultado="empate";
     }
     else
     {
         if (eleccionMaquina==2)
         {
             contP++;
-            alert ("Perdió    "+contG+"-"+contE+"-"+contP);
+            resultado="perdió";
         }
         else
         {
             contG++;
-            alert ("Ganó     "+contG+"-"+contE+"-"+contP);
+            resultado="ganó";
         }
     }
-
+mostrarResultado();
 }//FIN DE LA FUNCIÓN
 function papel()
 {
@@ -44,23 +54,23 @@ function papel()
 if (eleccionMaquina==1)
     {
         contG++;
-        alert ("Ganó     "+contG+"-"+contE+"-"+contP);
+        resultado="ganó";
     }
     else
     {
         if (eleccionMaquina==2)
         {
             contE++;
-            alert ("Empate    "+contG+"-"+contE+"-"+contP);  
+            resultado="empate";
         }
         else
         {
            contP++;
-        alert ("Perdió    "+contG+"-"+contE+"-"+contP);
+        resultado="perdió";
         }
     }
 
-
+mostrarResultado();
 }//FIN DE LA FUNCIÓN
 function tijera()
 {
@@ -68,21 +78,21 @@ function tijera()
 	if (eleccionMaquina==1)
     {
         contP++;
-        alert ("Perdió    "+contG+"-"+contE+"-"+contP);
+        resultado="perdió";
     }
     else
     {
         if (eleccionMaquina==2)
         {
             contG++;
-            alert ("Ganó     "+contG+"-"+contE+"-"+contP);
+            resultado="ganó";
         }
         else
         {
             contE++;
-            alert ("Empate    "+contG+"-"+contE+"-"+contP);    
+            resultado="empate";
         }
     }
 
-
+mostrarResultado();
 }//FIN DE LA FUNCIÓN
